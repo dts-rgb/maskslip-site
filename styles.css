@@ -1,0 +1,245 @@
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow: hidden;
+}
+
+.hero {
+  width: 100vw;
+  height: 100vh;
+  background: url('sources/background.jpg') center center / cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.15);
+  z-index: 0;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.title {
+  font-family: 'Instrument Serif', serif;
+  font-weight: 400;
+  font-size: clamp(3rem, 8vw, 8rem);
+  color: #fff;
+  text-align: center;
+  margin-top: 2vh;
+  line-height: 1;
+  z-index: 2;
+}
+
+.appstore {
+  width: clamp(140px, 14vw, 220px);
+  height: auto;
+  z-index: 2;
+  margin-top: 0.5vh;
+}
+
+.subtitle {
+  font-family: 'Instrument Serif', serif;
+  font-weight: 400;
+  font-style: italic;
+  font-size: clamp(1.6rem, 4vw, 3.5rem);
+  color: #fff;
+  text-align: center;
+  line-height: 1.15;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  white-space: nowrap;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.5), 0 4px 24px rgba(0, 0, 0, 0.25);
+}
+
+.rotating-word {
+  display: inline-block;
+}
+
+.phone-wrapper {
+  position: relative;
+  z-index: 1;
+  margin-top: 0;
+  flex: 1;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding-top: clamp(4rem, 8vh, 7rem);
+}
+
+.phone {
+  height: 46vh;
+  max-height: 440px;
+  width: auto;
+  position: relative;
+  z-index: 1;
+}
+
+.badge {
+  position: absolute;
+  z-index: 3;
+  height: auto;
+  cursor: pointer;
+}
+
+.badge:hover {
+  scale: 1.15;
+  z-index: 5;
+  transition: scale 0.3s ease;
+}
+
+.badge-smile {
+  width: clamp(120px, 14vw, 220px);
+  left: 50%;
+  top: 28%;
+  transform: translateX(calc(-100% - 2vw));
+  filter: drop-shadow(0 0 10px rgba(200, 190, 40, 0.5)) drop-shadow(0 0 25px rgba(200, 190, 40, 0.25));
+}
+
+.badge-blink {
+  width: clamp(100px, 11vw, 175px);
+  right: 50%;
+  top: 30%;
+  transform: translateX(calc(100% + 2vw));
+  filter: drop-shadow(0 0 10px rgba(255, 20, 100, 0.5)) drop-shadow(0 0 25px rgba(255, 20, 100, 0.25));
+}
+
+.badge-4k {
+  width: clamp(115px, 13vw, 210px);
+  right: 50%;
+  top: 60%;
+  transform: translateX(calc(100% + 0.5vw));
+  filter: drop-shadow(0 0 10px rgba(30, 30, 30, 0.6)) drop-shadow(0 0 25px rgba(30, 30, 30, 0.3));
+}
+
+.badge-uncle {
+  width: clamp(125px, 14vw, 225px);
+  left: 50%;
+  top: 70%;
+  transform: translateX(calc(-100% + 1vw));
+  filter: drop-shadow(0 0 10px rgba(60, 30, 255, 0.5)) drop-shadow(0 0 25px rgba(60, 30, 255, 0.25));
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+  .title {
+    font-size: clamp(2.5rem, 12vw, 4.5rem);
+  }
+
+  .appstore {
+    width: clamp(120px, 35vw, 180px);
+  }
+
+  .subtitle {
+    font-size: clamp(1.4rem, 7vw, 2.2rem);
+  }
+
+  .phone-wrapper {
+    padding-top: clamp(3rem, 7vh, 5rem);
+  }
+
+  .phone {
+    height: 40vh;
+    max-height: 350px;
+  }
+
+  .badge-smile {
+    width: 130px;
+    left: 2%;
+    top: 25%;
+    transform: none;
+  }
+
+  .badge-blink {
+    width: 110px;
+    right: 2%;
+    left: auto;
+    top: 25%;
+    transform: none;
+  }
+
+  .badge-4k {
+    width: 120px;
+    right: 5%;
+    left: auto;
+    top: 58%;
+    transform: none;
+  }
+
+  .badge-uncle {
+    width: 135px;
+    left: 5%;
+    top: 68%;
+    transform: none;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .title {
+    font-size: 2.5rem;
+    margin-top: 1.5vh;
+  }
+
+  .appstore {
+    width: 130px;
+  }
+
+  .subtitle {
+    font-size: 1.5rem;
+  }
+
+  .phone-wrapper {
+    padding-top: 2.5rem;
+  }
+
+  .phone {
+    height: 38vh;
+    max-height: 300px;
+  }
+
+  .badge-smile {
+    width: 110px;
+    left: 1%;
+    top: 22%;
+  }
+
+  .badge-blink {
+    width: 95px;
+    right: 1%;
+    top: 22%;
+  }
+
+  .badge-4k {
+    width: 105px;
+    right: 2%;
+    top: 55%;
+  }
+
+  .badge-uncle {
+    width: 115px;
+    left: 2%;
+    top: 65%;
+  }
+}
