@@ -149,7 +149,7 @@ body {
   }
 
   .appstore {
-    width: clamp(150px, 40vw, 200px);
+    width: clamp(180px, 55vw, 260px);
   }
 
   .subtitle {
@@ -204,7 +204,7 @@ body {
   }
 
   .appstore {
-    width: clamp(150px, 42vw, 190px);
+    width: clamp(180px, 55vw, 260px);
     margin-top: 2vh;
   }
 
