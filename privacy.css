@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #0a0a0a;
+  color: #e8e4df;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-weight: 300;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+.nav {
+  padding: 2rem 2rem 0;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.nav-logo {
+  font-family: 'Instrument Serif', serif;
+  font-size: 1.5rem;
+  color: #e8e4df;
+  text-decoration: none;
+  opacity: 0.7;
+  transition: opacity 0.2s;
+}
+
+.nav-logo:hover {
+  opacity: 1;
+}
+
+.content {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 4rem 2rem 6rem;
+}
+
+h1 {
+  font-family: 'Instrument Serif', serif;
+  font-weight: 400;
+  font-size: clamp(2.8rem, 6vw, 4rem);
+  color: #fff;
+  margin-bottom: 1rem;
+  line-height: 1.1;
+}
+
+.intro {
+  font-size: 1.15rem;
+  color: rgba(232, 228, 223, 0.7);
+  margin-bottom: 4rem;
+  max-width: 540px;
+  font-style: italic;
+  font-family: 'Instrument Serif', serif;
+  font-weight: 400;
+  font-size: 1.35rem;
+  line-height: 1.5;
+}
+
+section {
+  margin-bottom: 3rem;
+  padding-bottom: 3rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+section:last-of-type {
+  border-bottom: none;
+}
+
+h2 {
+  font-family: 'Instrument Serif', serif;
+  font-weight: 400;
+  font-size: 1.6rem;
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+p {
+  color: rgba(232, 228, 223, 0.65);
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0;
+}
+
+ul li {
+  color: rgba(232, 228, 223, 0.65);
+  font-size: 0.95rem;
+  padding: 0.4rem 0;
+  padding-left: 1.2rem;
+  position: relative;
+}
+
+ul li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.85rem;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: rgba(232, 228, 223, 0.3);
+}
+
+ul li strong {
+  color: rgba(232, 228, 223, 0.85);
+  font-weight: 500;
+}
+
+.contact p a {
+  color: #fff;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  transition: border-color 0.2s;
+}
+
+.contact p a:hover {
+  border-color: rgba(255, 255, 255, 0.6);
+}
+
+.response-time {
+  font-size: 0.85rem;
+  color: rgba(232, 228, 223, 0.35);
+  margin-top: 0.5rem;
+}
+
+footer {
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+footer p {
+  font-size: 0.8rem;
+  color: rgba(232, 228, 223, 0.25);
+}
+
+@media (max-width: 600px) {
+  .content {
+    padding: 3rem 1.5rem 4rem;
+  }
+
+  .nav {
+    padding: 1.5rem 1.5rem 0;
+  }
+
+  h1 {
+    font-size: 2.4rem;
+  }
+
+  .intro {
+    font-size: 1.15rem;
+    margin-bottom: 3rem;
+  }
+
+  section {
+    margin-bottom: 2.5rem;
+    padding-bottom: 2.5rem;
+  }
+}
